@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Mentor - Weather app solution
 
-## Getting Started
+This is a solution to the [Weather app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/weather-app-K1FhddVm49).
 
-First, run the development server:
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [How to run locally](#how-to-run-locally)
+  - [API and data source](#api-and-data-source)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Search for weather information by entering a location in the search bar
+- View current weather conditions including temperature, weather icon, and location details
+- See additional weather metrics like feels like temperature, humidity percentage, wind speed, and precipitation amounts
+- Browse a 7-day weather forecast with daily high/low temperatures and weather icons
+- View an hourly forecast showing temperature changes throughout the day
+- Switch between different days of the week using the day selector in the hourly forecast section
+- Toggle between Imperial and Metric measurement units via the units dropdown
+- Switch between specific temperature, wind speed, and precipitation units via the units dropdown
+- View the optimal layout for the interface depending on device screen size
+- See hover and focus states for all interactive elements on the page
+
+### Screenshot
+
+![SkyLuxe Weather preview](./preview.jpg)
+
+### Links
+
+- Solution URL: [Add your Frontend Mentor solution URL](https://www.frontendmentor.io/)
+- Live Site URL: [Add your live site URL](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox + CSS Grid
+- Mobile-first workflow
+- [React 19](https://react.dev/) - UI library
+- [Next.js 16 (App Router)](https://nextjs.org/) - React framework
+- TypeScript
+- Native Fetch API
+
+### How to run locally
+
+1. Clone the repository
+2. Install dependencies
+3. Start the dev server
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For production checks:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+### API and data source
 
-To learn more about Next.js, take a look at the following resources:
+This project uses:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Open-Meteo Geocoding API](https://open-meteo.com/en/docs/geocoding-api)
+- [Open-Meteo Forecast API](https://open-meteo.com/en/docs)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+No API key is required for the current implementation.
 
-## Deploy on Vercel
+Data flow:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. User enters a city name.
+2. Geocoding endpoint resolves the city to latitude/longitude.
+3. Forecast endpoint returns current, daily, and hourly weather.
+4. Unit selections are passed as API query params and reflected in the UI.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### What I learned
+
+- Building a complete weather dashboard with multiple forecast slices (current, daily, hourly) from one API provider
+- Structuring unit conversion as API-level options rather than manual client-side conversions
+- Managing asynchronous UI states cleanly (loading, error, success, retry)
+- Designing a responsive, polished card-based layout while keeping semantic and accessible controls
+
+### Continued development
+
+- Add geolocation support to load weather for the user’s current position
+- Persist unit preferences using local storage
+- Add richer accessibility improvements (keyboard interactions for menu close, ARIA live updates)
+- Add unit/integration tests for fetch and state logic
+
+### AI Collaboration
+
+AI was used to accelerate implementation and iteration.
+
+- Tooling used: Cascade AI coding agent
+- Used for: component/state scaffolding, styling iteration, and requirement-to-implementation alignment
+- Worked well: rapid refactoring, consistent TypeScript updates, quick lint/build validation loop
+- Needed manual review: final UX polish decisions, naming, and README curation
+
+## Author
+
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/rafi983)
