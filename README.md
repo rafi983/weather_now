@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add your Frontend Mentor solution URL](https://www.frontendmentor.io/)
-- Live Site URL: [Add your live site URL](https://your-live-site-url.com)
+- Solution URL: [My Frontend Mentor solution URL](https://www.frontendmentor.io/solutions/weathernow-fTY6BD93v5)
+- Live Site URL: [My live site URL](https://weather-now-chi-beige.vercel.app)
 
 ## My process
 
@@ -117,4 +117,4 @@ AI was used to accelerate implementation and iteration.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/rafi983)
+- Frontend Mentor - [@rafi983](https://www.frontendmentor.io/profile/rafi983)
