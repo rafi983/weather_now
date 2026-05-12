@@ -455,7 +455,7 @@ export default function Home() {
               </div>
 
               <div className="hourly-list">
-                {hourlyItems.slice(0, 7).map((entry) => (
+                {hourlyItems.slice(0, 9).map((entry) => (
                   <article key={entry.time}>
                     <Image
                       src={WEATHER_ICON_MAP[getWeatherIconKey(entry.weatherCode)]}

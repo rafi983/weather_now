@@ -15,11 +15,11 @@
 
 @media (min-width: 64rem) and (max-height: 900px) {
   .weather-shell {
-    padding: 0.25rem 0.9rem;
+    padding: 0.5rem 0.9rem;
   }
 
   .weather-card {
-    padding: 0.88rem 1rem;
+    padding: 0;
   }
 
   h1 {
@@ -48,28 +48,26 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 88% 18%, hsl(194deg 73% 71% / 45%), transparent 22%),
-    radial-gradient(circle at 12% 82%, hsl(230deg 90% 90% / 30%), transparent 36%),
-    linear-gradient(160deg, #f2f4f8 0%, #e6ebf8 100%);
+  background: linear-gradient(160deg, #05044f 0%, #020035 100%);
   color: var(--neutral-0);
   font-family: var(--font-dm-sans), sans-serif;
 }
 
 .weather-shell {
   min-height: 100dvh;
-  padding: 0.4rem 1rem;
+  width: 100%;
+  padding: 1.2rem 1rem 1.4rem;
   display: grid;
-  place-items: center;
+  place-items: start center;
 }
 
 .weather-card {
   width: min(100%, 56rem);
-  border-radius: 0.3rem;
-  padding: 1.2rem 1.25rem;
-  padding-bottom: 1.55rem;
-  background: linear-gradient(150deg, #040348 0%, #01002f 70%);
-  box-shadow: 0 1.2rem 2.2rem hsl(244deg 80% 8% / 26%);
+  min-height: auto;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .top-row {
@@ -85,9 +83,10 @@ body {
 }
 
 h1 {
-  margin: 0.95rem 0 0.8rem;
+  margin: 1.8rem 0 1.1rem;
   text-align: center;
-  font-size: clamp(1.85rem, 2.7vw, 2.4rem);
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+  font-weight: 700;
   line-height: 1.15;
   font-family: var(--font-bricolage), sans-serif;
 }
@@ -96,8 +95,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
-  margin: 0 auto 0.95rem;
-  width: min(100%, 24rem);
+  margin: 0 auto 1.35rem;
+  width: min(100%, 29rem);
 }
 
 .search-input-wrap {
@@ -213,8 +212,8 @@ button {
 
 .current-card {
   border-radius: 0.9rem;
-  min-height: 8rem;
-  padding: 0.9rem;
+  min-height: 12rem;
+  padding: 1.1rem;
   margin-bottom: 0.2rem;
   display: flex;
   justify-content: space-between;
@@ -443,13 +442,12 @@ select:focus-visible {
 
 @media (min-width: 64rem) {
   .weather-card {
-    padding: 1.3rem 1.25rem;
-    padding-bottom: 1.75rem;
+    padding: 0;
   }
 
   .dashboard-grid {
-    grid-template-columns: minmax(0, 1fr) 12.7rem;
-    gap: 0.68rem;
+    grid-template-columns: minmax(0, 1fr) 18.5rem;
+    gap: 1rem;
   }
 
   .dashboard-main {
@@ -473,8 +471,8 @@ select:focus-visible {
   }
 
   .weather-card {
-    border-radius: 0.8rem;
-    padding: 0.95rem;
+    border-radius: 0;
+    padding: 0;
   }
 
   .search-row {
